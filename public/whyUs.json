@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "iconA": "FaHandshake",
+      "title": "Friendly Team",
+      "description": "More Than 10 teams"
+    },
+    {
+      "id": 2,
+      "iconA": "FaImage",
+      "title": "Unique Scenario",
+      "description": "We Think Out Of The Boxes"
+    },
+    {
+      "id": 3,
+      "iconA": "BsBalloonFill",
+      "title": "Perfect Venues",
+      "description": "Behind It Genious Minds"
+    },
+    {
+      "id": 4,
+      "iconA": "FiPhoneCall",
+      "title": "24/7 Hours Service",
+      "description": "Always Open For You"
+    },
+    {
+      "id": 5,
+      "iconA": "GiShatter",
+      "title": "Unforgetable Times",
+      "description": "More Than 200 Teams"
+    },
+    {
+      "id": 6,
+      "iconA": "AiFillSound",
+      "title": "Dolby Sound System",
+      "description": "Best sound experience"
+    },
+    {
+      "id": 7,
+      "iconA": "FiSettings",
+      "title": "Best Management",
+      "description": "More Than 60 Experties"
+    },
+    {
+      "id": 8,
+      "iconA": "FiTrendingUp",
+      "title": "Trendy and Unique ",
+      "description": "Unique and Classic Implementation"
+    }
+  ]
+  
