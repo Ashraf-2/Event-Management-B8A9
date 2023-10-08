@@ -1,35 +1,17 @@
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 const SocialMediaContact = () => {
     return (
         <div className="flex flex-col md:flex-row justify-center items-center h-screen">
-            <div className="w-5/12 ">
+            <div data-aos="fade-right" data-aos-duration="1500"
+            className="w-5/12 ">
                 <h1 className="text-5xl my-10 text-orange-400 font-bold">Reach Us for your program</h1>
                 <p className="text-3xl">We value your input! Share your thoughts, tell us about the event you envision, or simply reach out to us. Your opinion matters. Connect with us on social media for updates, inspiration, and more.</p>
             </div>
-            <div className="border">
-                {/* <div>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="" />
-                </div>
-                <div>
-                    <label htmlFor="subject">Your Event Subject</label>
-                    <input type="text" placeholder="Type of Event You Want" name="subject" id="" />
-                </div>
-                <div>
-                    <label htmlFor="description">Description</label>
-                    <input type="text" placeholder="details plan for your event" name="description" id="" />
-                </div>
-                
-                <input type="submit" name="Submit" id="" /> */}
-
-                {/* <div className=" bg-base-200">
-                    <div className="hero-content">
-                       
-                        
-                    </div>
-                </div> */}
-
-
+            <div data-aos="fade-left" data-aos-duration="2000" className="border">
                 <div className=" w-full  shadow-2xl bg-base-100">
                     <form className="card-body">
                         <div className="">
@@ -53,12 +35,11 @@ const SocialMediaContact = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn  bg-gradient-to-r from-[#ff3e00] to-[#ffbe30] hover:opacity-80 text-white font-bold text-lg">Login</button>
+                            <button className="btn  bg-gradient-to-r from-[#ff3e00] to-[#ffbe30] hover:opacity-80 text-white font-bold text-lg">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
-
         </div>
     );
 };

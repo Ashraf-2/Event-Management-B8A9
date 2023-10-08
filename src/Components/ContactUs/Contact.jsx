@@ -1,9 +1,13 @@
 import SocialMediaContact from "./SocialMediaContact";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const Contact = () => {
     return (
         <div>
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/tBwcRds/busy-woman-doing-many-things-same-time.jpg)' }}>
+            <div data-aos="fade-up" data-aos-duration="1500" className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/tBwcRds/busy-woman-doing-many-things-same-time.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
