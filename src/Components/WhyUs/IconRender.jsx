@@ -7,11 +7,10 @@ import { GiShatter } from 'react-icons/gi';
 import { AiFillSound } from 'react-icons/ai';
 import { FiSettings } from 'react-icons/fi';
 import { FiTrendingUp } from 'react-icons/fi';
-import { useState } from 'react';
 
 
 const IconRender = ({ iconSingular }) => {
-    console.log(iconSingular);
+    // console.log(iconSingular);
     const {id,iconA,title,description} = iconSingular;
     const ar = [
         <FaHandshake></FaHandshake>,

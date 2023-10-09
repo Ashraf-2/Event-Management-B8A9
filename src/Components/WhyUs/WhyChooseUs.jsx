@@ -19,7 +19,7 @@ const WhyChooseUs = () => {
     return (
         <div data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000" className="px-5 py-16">
+        data-aos-duration="1000" className="px-5 py-16 bg-red-400">
             <div className="flex flex-col md:flex-row justify-between">
                 <div>
                     <p className="text-xl tracking-[5px] uppercase text-[#878787]">Why Choose Us</p>
