@@ -13,7 +13,8 @@ const Home = () => {
             <Banner></Banner>
             <Mission></Mission>
             <WhyChooseUs></WhyChooseUs>
-            <div className="flex flex-col items-center py-16  bg-green-500 ">
+            <div className="flex flex-col items-center mb-5">
+                <h2 className="text-3xl font-bold border-b-2 mb-8 border-orange-500 ">Our Services</h2>
 
                 <div className=" grid grid-cols-1 md:grid-cols-2 px-10 gap-5 mx-auto">
                     {

@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import swal from 'sweetalert';
+
 const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
@@ -16,6 +18,8 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
+                swal("Good job!", "Logged in successfully!", "success");
+
                 navigate(location?.state ? location.state : '/');
             })
             .catch(error => console.log(error))
@@ -25,6 +29,8 @@ const Login = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
+                swal("Congratulations!", "Login successfully!", "success");
+                navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
                 console.log(error);

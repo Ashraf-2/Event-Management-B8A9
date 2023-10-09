@@ -1,13 +1,15 @@
 import { useContext, useState } from 'react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
-
+import swal from 'sweetalert';
 
 const Register = () => {
     const {createUser,googlePopUpRegister} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister = (e)=> {
         e.preventDefault();
@@ -17,7 +19,11 @@ const Register = () => {
         console.log("register data: ",name,email,password);
 
         createUser(email,password)
-        .then(result => console.log(result.user))
+        .then(result => {
+            console.log(result.user)
+            swal("Congratulations", "Your signup successfull!", "success");
+            navigate(location?.state ? location.state : '/');
+        })
         .catch(error=> console.log(error) )
 
     }
