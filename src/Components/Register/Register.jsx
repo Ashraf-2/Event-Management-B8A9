@@ -1,11 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser,googlePopUpRegister} = useContext(AuthContext);
+
     const handleRegister = (e)=> {
         e.preventDefault();
         const name = e.target.name.value;
@@ -17,8 +20,8 @@ const Register = () => {
         .then(result => console.log(result.user))
         .catch(error=> console.log(error) )
 
-
     }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -51,10 +54,10 @@ const Register = () => {
                                 <button className="btn my-3 shadow-2xl bg-gradient-to-r from-[#ff3e00] to-[#ffbe30] hover:opacity-80 text-white font-bold text-lg rounded px-10 uppercase" >Sign Up</button>
                             </div>
                             <p>Have an account already? <Link className='font-bold' to="/login">Login Here</Link></p>
-                            <div className='flex flex-col items-center'>
+                            {/* <div className='flex flex-col items-center'>
                                 <p>or Sign Up Using</p>
                                 <p className='text-red-600 text-4xl'><AiFillGoogleCircle></AiFillGoogleCircle></p>
-                            </div>
+                            </div> */}
                         </form>
                     </div>
                 </div>

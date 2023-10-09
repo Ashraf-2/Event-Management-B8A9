@@ -3,23 +3,32 @@ import { AiFillGoogleCircle } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const { signIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
-    const handleLogin=(e)=>{
+    const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log("login data: ",email,password);
+        console.log("login data: ", email, password);
 
-        signIn(email,password)
-        .then(result => {
-            console.log(result.user);
-            navigate(location?.state ? location.state : '/');
-        })
-        .catch(error => console.log(error))
+        signIn(email, password)
+            .then(result => {
+                console.log(result.user);
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => console.log(error))
 
+    }
+    const handleGoogle = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     return (
@@ -31,7 +40,7 @@ const Login = () => {
 
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleLogin} className="card-body">
+                        <form onSubmit={handleLogin} className="card-body pb-0 mb-0">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -46,14 +55,18 @@ const Login = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn my-3 shadow-2xl bg-gradient-to-r from-[#ff3e00] to-[#ffbe30] hover:opacity-80 text-white font-bold text-lg rounded px-10 uppercase">Login</button>
+                                <button className="btn  shadow-2xl bg-gradient-to-r from-[#ff3e00] to-[#ffbe30] hover:opacity-80 text-white font-bold text-lg rounded px-10 uppercase">Login</button>
                             </div>
-                            <p>Don't have an account? <Link className="font-bold" to="/register">Register Here</Link></p>
-                            <div className='flex flex-col items-center'>
-                                <p>or Sign Up Using</p>
-                                <p className='text-red-600 text-4xl'><AiFillGoogleCircle></AiFillGoogleCircle></p>
-                            </div>
+                            <p className="mt-3">Don't have an account? <Link className="font-bold" to="/register">Register Here</Link></p>
+
                         </form>
+                        <div className='flex flex-col items-center mt-3 mb-5'>
+                            <p>or Sign in using</p>
+                            
+                                <buttonon onClick={handleGoogle} className="btn text-red-600 text-4xl hover:cursor-pointer"><AiFillGoogleCircle></AiFillGoogleCircle>
+                                </buttonon>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

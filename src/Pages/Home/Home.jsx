@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import WhyChooseUs from "../../Components/WhyUs/WhyChooseUs";
 import Mission from "../../Components/mission&vission/Mission";
 import Banner from "./Banner/Banner";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import HomePgServices from "../../Components/HomePgServices/HomePgServices";
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
                         events.slice(0, 4).map(event => <HomePgServices key={event.id} event={event}></HomePgServices>)
                     }
                 </div>
-                <button className="btn mt-5 ">see all</button>
+                <Link to="/services"><button className="btn mt-5 ">see all</button></Link>
             </div>
         </div>
     );

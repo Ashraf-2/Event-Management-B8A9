@@ -3,33 +3,33 @@
         "id": 1,
         "title": "Birthday Party Kid",
         "image": "https://i.ibb.co/gyf2XWp/birthday-kid-enjoy.jpg",
-        "price": "$2,500 - $10,000",
+        "price": "$800 - $2,000",
         "short_description": "Get ready for a world of fun and imagination! Join us for an exciting kid's birthday party filled with games, surprises, and joyful moments. It's a day where young dreams take flight, and memories are made to last a lifetime.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 2,
         "title": "Birthday Party Adult",
         "image": "https://i.ibb.co/RcrpyCK/birthday-celeb-adult.jpg",
-        "price": "Custom Quote",
+        "price": "$800 - $2,000",
         "short_description": "Cheers to another year of life and adventure! Join us for an unforgettable adult birthday party, where laughter, good company, and celebration take center stage. It's your special day, and we'll make it a fabulous occasion you'll always remember.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 3,
         "title": "Wedding Celebrations",
         "image": "https://i.ibb.co/cCKcc2z/wedding.jpg",
-        "price": "$500 - $2,000",
+        "price": "$1000 - $5,000",
         "short_description": "Experience the magic of a dream wedding with us. Join hands, hearts, and loved ones as we craft a day of love, joy, and cherished moments. It's your moment to shine, and we're here to make it perfect.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 4,
         "title": "Bridal Shower",
-        "image": "https://i.ibb.co/1Xmcw35/3641777-1935090.jpg",
-        "price": "Custom Quote",
+        "image": "https://i.ibb.co/djBCnB8/bridal-shower-2.jpg",
+        "price": "$800 - $1,500",
         "short_description": "Shower the bride-to-be with love and laughter! Join us for a heartfelt bridal shower filled with joy, games, and cherished moments. Let's make it a day she'll treasure forever.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 5,
@@ -37,39 +37,39 @@
         "image": "https://i.ibb.co/6sGjd1p/wedding-couple-best-friends-are-drinking-champagne-celebrating-park-wedding-day.jpg",
         "price": "$800 - $3,000",
         "short_description": "Continue the joy post-wedding! Join us for delightful after-wedding celebrations, where the festivities continue, and happiness knows no bounds. It's the perfect way to extend the magic of your special day.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 6,
         "title": "Anniversary Celebrations",
         "image": "https://i.ibb.co/xGWcq7c/2002152-6602.jpg",
-        "price": "$600 - $2,500",
+        "price": "$1200 - $2,500",
         "short_description": "Commemorate your love story with us. An anniversary celebration filled with love, laughter, and cherished memories awaits. Join us as we craft an unforgettable day, honoring your enduring commitment and the journey of togetherness you've embarked upon.Celebrate milestones in style with our anniversary planning.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 7,
         "title": "Outdoor Adventures",
         "image": "https://i.ibb.co/ww8shVj/outdoor-adventures-2.jpg",
-        "price": "$600 - $2,500",
+        "price": "$800 - $2,500",
         "short_description": "Embark on thrilling outdoor adventures with us! Explore the great outdoors, challenge your limits, and create unforgettable memories. Get ready for adrenaline-pumping experiences in stunning natural settings. Join us and let your adventurous spirit soar!",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 8,
         "title": "Wedding Celebrations Indian",
         "image": "https://i.ibb.co/7gmLCwZ/indian-wed.jpg",
-        "price": "$1,000 - $5,000",
+        "price": "$2,000 - $15,000",
         "short_description": "Embrace the beauty of an Indian wedding, where love and tradition unite in a dazzling celebration of a lifetime.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 9,
         "title": "Baby Shower",
         "image": "https://i.ibb.co/SXdvxWq/front-view-beautiful-baby-shower-concept.jpg",
-        "price": "$1,000 - $5,000",
+        "price": "$600 - $2,000",
         "short_description": "Get ready to shower the mom-to-be with love and anticipation! Join us for a heartwarming baby shower filled with joy, gifts, and sweet moments. It's a special occasion as we eagerly await the arrival of the newest member of the family. Let's celebrate this beautiful journey and welcome the little bundle of joy in style!",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     },
     {
         "id": 10,
@@ -77,6 +77,6 @@
         "image": "https://i.ibb.co/Wvf3Gj0/family-reunion.jpg",
         "price": "$1,000 - $3,000",
         "short_description": "Reconnect, reminisce, and create lasting memories as we come together for a joyous family reunion. Join us for a day of laughter, love, and shared stories, as we celebrate the bonds that unite us. It's a time to cherish our past and embrace our future as one big, happy family.",
-        "services":"decoration indoor,outdoor,musical event,food and beverage"
+        "serviceInfo":"Decoration indoor,outdoor,musical event,food and beverage"
     }
 ]

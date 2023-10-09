@@ -11,6 +11,9 @@ import Stuffs from './Components/Stuffs/Stuffs';
 import Gallery from './Components/Gallery/Gallery';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
+import PrivateRoutes from './Routes/PrivateRoutes';
+import Services from './Components/Services/Services';
 
 
 const router = createBrowserRouter([
@@ -24,8 +27,9 @@ const router = createBrowserRouter([
         loader: () => fetch('/services.json')
       },
       {
-        path: "/gallery",
-        element: <Gallery></Gallery>
+        path: "/services",
+        element: <Services></Services>,
+        loader: ()=> fetch('/services.json')
       },
       {
         path: "/contact",
@@ -42,6 +46,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/service/:id",
+        element: <PrivateRoutes><ServiceDetail></ServiceDetail></PrivateRoutes>,
+        loader: ()=> fetch("/services.json")
       }
     ]
   },
