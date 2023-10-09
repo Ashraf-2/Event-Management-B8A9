@@ -69,8 +69,8 @@ const Login = () => {
                         <div className='flex flex-col items-center mt-3 mb-5'>
                             <p>or Sign in using</p>
                             
-                                <buttonon onClick={handleGoogle} className="btn text-red-600 text-4xl hover:cursor-pointer"><AiFillGoogleCircle></AiFillGoogleCircle>
-                                </buttonon>
+                                <button onClick={handleGoogle} className="btn text-red-600 text-4xl hover:cursor-pointer"><AiFillGoogleCircle></AiFillGoogleCircle>
+                                </button>
                             
                         </div>
                     </div>

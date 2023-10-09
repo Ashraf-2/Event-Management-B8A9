@@ -20,6 +20,7 @@ const Navbar = () => {
         <li id="sidebar"><NavLink className="font-semibold text-xl" to="/contact">Contact</NavLink></li>
         <li id="sidebar"><NavLink className="font-semibold text-xl" to="/services">Services</NavLink></li>
         <li id="sidebar"><NavLink className="font-semibold text-xl" to="/stuffs">Stuffs</NavLink></li>
+        
         {/* <li id="sidebar"><a className="font-semibold text-xl" href="">About us</a></li> */}
 
     </>
@@ -59,7 +60,7 @@ const Navbar = () => {
                                                 <span className="badge">New</span>
                                             </a>
                                         </li>
-                                        <li><a>Settings</a></li>
+                                        <li><a>{user.email? user.email: "null"}</a></li>
                                         <li><a href="/" onClick={handleSignOut}><button>Logout</button></a></li>
                                     </ul>
                                 </div>
