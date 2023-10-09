@@ -2,14 +2,18 @@ import { useContext, useState } from 'react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 
 import swal from 'sweetalert';
 
+const auth = getAuth();
+
 const Register = () => {
-    const {createUser,googlePopUpRegister} = useContext(AuthContext);
+    const {createUser,googlePopUpRegister,updateUser} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const [registerError, setRegisterError] = useState("");
+
 
     const handleRegister = (e)=> {
         e.preventDefault();
@@ -18,9 +22,38 @@ const Register = () => {
         const password = e.target.password.value;
         console.log("register data: ",name,email,password);
 
+        if (password.length < 6) {
+            setRegisterError("Password should have atleast 6 characters");
+            swal("invalid Password!","Your Password should have atleast 6 characters","error");
+            // console.log(loginError);
+            return;
+        }
+        else if(!/[A-Z]/.test(password)){
+            setRegisterError("Password must have one uppercase");
+            swal("invalid Password","Password must have one uppercase","error");
+            return;
+        }
+        else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
+            setRegisterError("Pasword must have one special character");
+            swal("invalid Password","Pasword must have one special character","error");
+            return;
+        }
+        
+
+       
         createUser(email,password)
         .then(result => {
             console.log(result.user)
+            updateUser(name) 
+              .then((res) => {
+                // Profile updated!
+                // ...
+                console.log("update profile");
+              }).catch((error) => {
+                // An error occurred
+                // ...
+                console.log(error);
+              });
             swal("Congratulations", "Your signup successfull!", "success");
             navigate(location?.state ? location.state : '/');
         })

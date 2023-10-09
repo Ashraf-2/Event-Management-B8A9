@@ -7,7 +7,6 @@ import AuthProvider from './Provider/AuthProvider.jsx';
 import Root from './Components/Root.jsx';
 import Home from './Pages/Home/Home.jsx';
 import Contact from './Components/ContactUs/Contact';
-import Stuffs from './Components/Stuffs/Stuffs';
 import Gallery from './Components/Gallery/Gallery';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
@@ -15,6 +14,7 @@ import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 import PrivateRoutes from './Routes/PrivateRoutes';
 import Services from './Components/Services/Services';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import Employe from './Components/Employe/Employe';
 
 
 const router = createBrowserRouter([
@@ -38,8 +38,9 @@ const router = createBrowserRouter([
         element: <Contact></Contact>
       },
       {
-        path: "/stuffs",
-        element: <Stuffs></Stuffs>
+        path: "/employe",
+        element: <Employe></Employe>,
+        loader: ()=> fetch('/employe.json')
       },
       {
         path: "/login",

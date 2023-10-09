@@ -1,28 +1,48 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiFillGoogleCircle } from "react-icons/ai";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import swal from 'sweetalert';
+import { getAuth, updateProfile } from "firebase/auth";
 
+const auth = getAuth();
 const Login = () => {
-    const { signIn, googleSignIn } = useContext(AuthContext);
+    const { signIn, googleSignIn,updateUser } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const [loginError, setloginError] = useState("");
 
     const handleLogin = (e) => {
+        
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log("login data: ", email, password);
 
+        if (password.length < 6) {
+            setloginError("Password should have atleast 6 characters");
+            swal("invalid Password!","Your Password should have atleast 6 characters","error");
+            // console.log(loginError);
+            return;
+        }
+        else if(!/[A-Z]/.test(password)){
+            setloginError("Password must have one uppercase");
+            swal("invalid Password","Password must have one uppercase","error");
+            return;
+        }
+        else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
+            setloginError("Pasword must have one special character");
+            swal("invalid Password","Pasword must have one special character","error");
+            return;
+        }
+
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
                 swal("Good job!", "Logged in successfully!", "success");
-
                 navigate(location?.state ? location.state : '/');
             })
-            .catch(error => console.log(error))
+            .catch(error => setloginError(error.message));
 
     }
     const handleGoogle = () => {
@@ -43,7 +63,11 @@ const Login = () => {
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Login now!</h1>
-
+                        <div>
+                            {
+                                loginError && <p className="my-2 text-red-600 font-medium">{loginError}</p>
+                            }
+                        </div>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body pb-0 mb-0">

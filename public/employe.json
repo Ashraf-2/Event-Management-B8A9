@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "name": "Sarah Brown",
+      "image": "https://i.ibb.co/NL1V2X1/lenalee-crus-gd.jpg",
+      "designation": "CEO of our company"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "image": "https://i.ibb.co/4PxKfpn/logistic-manager.jpg",
+      "designation": "Project Manager"
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "image": "https://i.ibb.co/QcQmRJJ/romley-halden-sound-eng.jpg",
+      "designation": "Graphic Designer"
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "image": "https://i.ibb.co/3T4ZmRk/grace-harper-ep.jpg",
+      "designation": "Sound Engineer"
+    },
+    {
+      "id": 5,
+      "name": "David Lee",
+      "image": "https://i.ibb.co/18zpV0h/jimmy-edward-em.jpg",
+      "designation": "Food and Bavarage Manager"
+    },
+    {
+        "id": 6,
+        "name": "John Doe",
+        "image": "https://i.ibb.co/YBnCLgs/steve-logan-food-bavarage-mngr.jpg",
+        "designation": "Architect"
+    }
+  ]
+  
